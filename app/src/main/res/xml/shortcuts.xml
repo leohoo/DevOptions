@@ -1,17 +1,24 @@
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
-        android:shortcutId="compose"
+        android:shortcutId="mobile_network"
         android:enabled="true"
         android:icon="@null"
-        android:shortcutShortLabel="@string/menu_s"
-        android:shortcutLongLabel="@string/app_name"
-        android:shortcutDisabledMessage="@string/app_name">
+        android:shortcutShortLabel="@string/mobile_network"
+        android:shortcutLongLabel="@string/mobile_network">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetClass="com.android.settings.Settings$WirelessSettingsActivity"
+            android:targetPackage="com.android.settings"/>
+
+    </shortcut>
+    <shortcut
+        android:shortcutId="dev_options"
+        android:enabled="true"
+        android:icon="@null"
+        android:shortcutShortLabel="@string/app_name"
+        android:shortcutLongLabel="@string/app_name">
         <intent
             android:action="com.android.settings.APPLICATION_DEVELOPMENT_SETTINGS" />
-        <!-- If your shortcut is associated with multiple intents, include them
-             here. The last intent in the list determines what the user sees when
-             they launch this shortcut. -->
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
-    <!-- Specify more shortcuts here. -->
 </shortcuts>
